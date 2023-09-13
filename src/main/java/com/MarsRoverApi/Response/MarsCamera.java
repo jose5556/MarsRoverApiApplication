@@ -1,4 +1,4 @@
-package com.MarsRoverApi;
+package com.MarsRoverApi.Response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;

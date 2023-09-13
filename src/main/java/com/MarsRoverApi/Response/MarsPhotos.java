@@ -1,4 +1,4 @@
-package com.MarsRoverApi;
+package com.MarsRoverApi.Response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
@@ -15,6 +15,7 @@ public class MarsPhotos {
     private String imgSrc;
     @JsonProperty("earth_date")
     private String earthDate;
+    private MarsRover rover;
 
     @Override
     public String toString() {

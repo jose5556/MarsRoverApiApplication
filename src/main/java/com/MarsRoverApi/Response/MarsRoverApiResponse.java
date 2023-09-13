@@ -1,4 +1,4 @@
-package com.MarsRoverApi;
+package com.MarsRoverApi.Response;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -22,7 +22,6 @@ public class MarsRoverApiResponse {
             sb.append(", ");
         }
 
-        // Remova a vírgula extra no final, se houver pelo menos uma foto
         if (!photos.isEmpty()) {
             sb.delete(sb.length() - 2, sb.length());
         }

@@ -1,5 +1,6 @@
 package com.MarsRoverApi;
 
+import com.MarsRoverApi.Response.MarsRoverApiResponse;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
