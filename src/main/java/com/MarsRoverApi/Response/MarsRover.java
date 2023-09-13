@@ -20,4 +20,18 @@ public class MarsRover {
     private String maxDate;
     @JsonProperty("total_photos")
     private Long totalPhotos;
+
+    @Override
+    public String toString() {
+        return "MarsRover{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", landingDate='" + landingDate + '\'' +
+                ", launchDate='" + launchDate + '\'' +
+                ", status='" + status + '\'' +
+                ", max_sol=" + max_sol +
+                ", maxDate='" + maxDate + '\'' +
+                ", totalPhotos=" + totalPhotos +
+                '}';
+    }
 }
