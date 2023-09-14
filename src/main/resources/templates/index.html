@@ -10,8 +10,8 @@
 </head>
 <body>
 <h2>Welcome to the Mars Rover!!!!</h2>
-<div th:text="${name}">
-</div>
+
+<img th:each="photo : ${roverData.photos}" th:src="${photo.imgSrc}"/>
 
 </body>
 </html>
