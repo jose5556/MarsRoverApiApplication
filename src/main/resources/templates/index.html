@@ -13,25 +13,37 @@
 
 <div class="container">
 
-    <div th:each="index : ${#numbers.sequence(0, roverData.photos.size(), 4)}" class="row">
-        <div class="col-sm">
+    <h2>Welcome to Mars Rover Photos</h2>
+
+    <div class="btn-group" role="group" style="margin : 2em 0em;" id="marsApiButtons">
+        <input type="radio" class="btn-check" name="btnradio" id="marsApiCuriosity" autocomplete="off" checked>
+        <label class="btn btn-outline-primary" for="marsApiCuriosity">Curiosity</label>
+
+        <input type="radio" class="btn-check" name="btnradio" id="marsApiOpportunity" autocomplete="off">
+        <label class="btn btn-outline-primary" for="marsApiOpportunity">Opportunity</label>
+
+        <input type="radio" class="btn-check" name="btnradio" id="marsApiSpirit" autocomplete="off">
+        <label class="btn btn-outline-primary" for="marsApiSpirit">Spirit</label>
+    </div>
+
+    <div th:each="index : ${#numbers.sequence(0, roverData.photos.size(), 4)}" class="row" style="margin-bottom : 1.5em">
+        <div class="col-sm" th:if="${index < roverData.photos.size()}">
             <img th:src="${roverData.photos[index].imgSrc}" class="img-fluid">
         </div>
-        <div class="col-sm">
+        <div class="col-sm" th:if="${index+1 < roverData.photos.size()}">
             <img th:src="${roverData.photos[index+1].imgSrc}" class="img-fluid">
         </div>
-        <div class="col-sm">
+        <div class="col-sm" th:if="${index+2 < roverData.photos.size()}">
             <img th:src="${roverData.photos[index+2].imgSrc}" class="img-fluid">
         </div>
-        <div class="col-sm">
+        <div class="col-sm" th:if="${index+3 < roverData.photos.size()}">
             <img th:src="${roverData.photos[index+3].imgSrc}" class="img-fluid">
         </div>
     </div>
 </div>
 
-
-
 <!-- <img th:each="photo : ${roverData.photos}" th:src="${photo.imgSrc}"/> !-->
 
+<script type="text/javascript" src="/index.js"></script>
 </body>
 </html>

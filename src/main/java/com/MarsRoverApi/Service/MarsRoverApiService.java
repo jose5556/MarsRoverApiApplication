@@ -11,7 +11,7 @@ public class MarsRoverApiService {
     public MarsRoverApiResponse getRoverData() {
         RestTemplate rt = new RestTemplate();
 
-        ResponseEntity<MarsRoverApiResponse> response = rt.getForEntity("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=100&api_key=OsIiACDHA3AJ1ojtfuOHIALEHSoTviJzjVpM40xY", MarsRoverApiResponse.class);
+        ResponseEntity<MarsRoverApiResponse> response = rt.getForEntity("https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?sol=100&api_key=OsIiACDHA3AJ1ojtfuOHIALEHSoTviJzjVpM40xY", MarsRoverApiResponse.class);
         return response.getBody();
     }
 

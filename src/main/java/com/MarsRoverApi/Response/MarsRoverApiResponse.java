@@ -18,7 +18,7 @@ public class MarsRoverApiResponse {
         sb.append("photos=[");
 
         for (MarsPhotos photo : photos) {
-            sb.append(photo.toString());
+            sb.append(photos.toString());
             sb.append(", ");
         }
 
