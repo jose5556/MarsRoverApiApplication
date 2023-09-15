@@ -5,7 +5,7 @@ import com.MarsRoverApi.Service.MarsRoverApiService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class HomeController {
@@ -13,10 +13,14 @@ public class HomeController {
 private MarsRoverApiService roverApiService;
 
     @GetMapping("/")
-    public String InitialHome(Model model) {
-        MarsRoverApiResponse roverData = roverApiService.getRoverData();
+    public String getHomeView(Model model, @RequestParam(required = false) String marsRoverApi) {
+        if (marsRoverApi == null || marsRoverApi.isEmpty()) {
+            marsRoverApi = "opportunity"; // defines the opportunity for when the page is reloaded for the first time;
+        }
+        MarsRoverApiResponse roverData = roverApiService.getRoverData(marsRoverApi);
         model.addAttribute("roverData", roverData);
         return "index";
     }
+
 
 }
