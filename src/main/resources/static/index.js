@@ -21,35 +21,29 @@ function getParameterByName(name) {
 }
 
 
-const roverType = getParameterByName("marsRoverApi")
+const marsRoverType = getParameterByName("marsRoverApi")
 
-if (roverType == "Curiosity") {
+
+function btnRover(roverType) {
+
+if (roverType == "" || roverType == null) {
 
         document.getElementById("marsApiCuriosity").classList.remove("btn");
         document.getElementById("marsApiCuriosity").classList.remove("btn-secondary");
         document.getElementById("marsApiCuriosity").classList.remove("btn-lg");
         document.getElementById("marsApiCuriosity").classList = "btn btn-primary btn-lg";
-
-} else if (roverType == "Opportunity") {
-
-        document.getElementById("marsApiOpportunity").classList.remove("btn");
-        document.getElementById("marsApiOpportunity").classList.remove("btn-secondary");
-        document.getElementById("marsApiOpportunity").classList.remove("btn-lg");
-        document.getElementById("marsApiOpportunity").classList = "btn btn-primary btn-lg";
-
-} else if (roverType == "Spirit") {
-
-        document.getElementById("marsApiSpirit").classList.remove("btn");
-        document.getElementById("marsApiSpirit").classList.remove("btn-secondary");
-        document.getElementById("marsApiSpirit").classList.remove("btn-lg");
-        document.getElementById("marsApiSpirit").classList = "btn btn-primary btn-lg";
 
 } else {
 
-        document.getElementById("marsApiCuriosity").classList.remove("btn");
-        document.getElementById("marsApiCuriosity").classList.remove("btn-secondary");
-        document.getElementById("marsApiCuriosity").classList.remove("btn-lg");
-        document.getElementById("marsApiCuriosity").classList = "btn btn-primary btn-lg";
+        document.getElementById("marsApi" + roverType).classList.remove("btn");
+        document.getElementById("marsApi" + roverType).classList.remove("btn-secondary");
+        document.getElementById("marsApi" + roverType).classList.remove("btn-lg");
+        document.getElementById("marsApi" + roverType).classList = "btn btn-primary btn-lg";
+
+        }
+
 }
+
+btnRover(marsRoverType)
 
 
