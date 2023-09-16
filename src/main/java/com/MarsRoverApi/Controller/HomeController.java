@@ -13,11 +13,15 @@ public class HomeController {
 private MarsRoverApiService roverApiService;
 
     @GetMapping("/")
-    public String getHomeView(Model model, @RequestParam(required = false) String marsRoverApi) {
+    public String getHomeView(Model model, @RequestParam(required = false) String marsRoverApi,
+                              @RequestParam(required = false) Integer marsSol) {
         if (marsRoverApi == null || marsRoverApi.isEmpty()) {
-            marsRoverApi = "curiosity"; // defines the opportunity for when the page is reloaded for the first time;
+            marsRoverApi = "opportunity"; // defines the opportunity for when the page is reloaded for the first time;
         }
-        MarsRoverApiResponse roverData = roverApiService.getRoverData(marsRoverApi);
+        if (marsSol == null) {
+            marsSol = 1;
+        }
+        MarsRoverApiResponse roverData = roverApiService.getRoverData(marsRoverApi, marsSol);
         model.addAttribute("roverData", roverData);
         return "index";
     }

@@ -17,16 +17,22 @@
 
     <form method="get" action="" id="formRoverType">
         <input type="hidden" id="marsRoverApi" name="marsRoverApi" value=""/>
-    <div class="btn-group" role="group" style="margin : 2em 0em;" id="marsApiButtons">
-
-        <button type="button" class="btn btn-secondary btn-lg" id="marsApiCuriosity"> Curiosity</button>
-        <button type="button" class="btn btn-secondary btn-lg" id="marsApiOpportunity">Opportunity</button>
+    <div class="btn-group btn-group-lg" role="group" style="margin: 2em 0em;" id="marsApiButtons">
+        <button type="button" class="btn btn-secondary btn-lg" id="marsApiOpportunity"> Curiosity</button>
+        <button type="button" class="btn btn-secondary btn-lg" id="marsApiCuriosity">Opportunity</button>
         <button type="button" class="btn btn-secondary btn-lg" id="marsApiSpirit">Spirit</button>
-
     </div>
+
+        <div class="form-group" style="margin: 1em 0em">
+            <label for="marsSol" class="col-form-label col-form-label-lg"> Mars Sol (aka Mars Day): </label>
+            <input class="form-control form control-lg" type="number" id="marsSol" name="marsSol" min="0" value="1">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
     </form>
 
-    <div th:each="index : ${#numbers.sequence(0, roverData.photos.size(), 4)}" class="row" style="margin-bottom : 1.5em">
+
+    <div th:each="index : ${#numbers.sequence(0, roverData.photos.size(), 4)}" class="row" style="margin: 2em 0em">
         <div class="col-sm" th:if="${index < roverData.photos.size()}">
             <img th:src="${roverData.photos[index].imgSrc}" class="img-fluid">
         </div>
@@ -41,6 +47,8 @@
         </div>
     </div>
 </div>
+
+
 
 <!-- <img th:each="photo : ${roverData.photos}" th:src="${photo.imgSrc}"/> !-->
 

@@ -20,18 +20,14 @@ function getParameterByName(name) {
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
-
-const marsRoverType = getParameterByName("marsRoverApi")
-
-
 function btnRover(roverType) {
 
 if (roverType == "" || roverType == null) {
 
-        document.getElementById("marsApiCuriosity").classList.remove("btn");
-        document.getElementById("marsApiCuriosity").classList.remove("btn-secondary");
-        document.getElementById("marsApiCuriosity").classList.remove("btn-lg");
-        document.getElementById("marsApiCuriosity").classList = "btn btn-primary btn-lg";
+        document.getElementById("marsApiOpportunity").classList.remove("btn");
+        document.getElementById("marsApiOpportunity").classList.remove("btn-secondary");
+        document.getElementById("marsApiOpportunity").classList.remove("btn-lg");
+        document.getElementById("marsApiOpportunity").classList = "btn btn-primary btn-lg";
 
 } else {
 
@@ -44,6 +40,12 @@ if (roverType == "" || roverType == null) {
 
 }
 
-btnRover(marsRoverType)
+const marsSol = getParameterByName("marsSol");
+document.getElementById("marsSol").value = marsSol;
+
+const marsRoverType = getParameterByName("marsRoverApi");
+btnRover(marsRoverType);
+
+
 
 
