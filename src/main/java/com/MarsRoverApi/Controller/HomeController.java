@@ -1,5 +1,6 @@
 package com.MarsRoverApi.Controller;
 
+import com.MarsRoverApi.DTO.HomeDto;
 import com.MarsRoverApi.Response.MarsRoverApiResponse;
 import com.MarsRoverApi.Service.MarsRoverApiService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,17 +14,15 @@ public class HomeController {
 private MarsRoverApiService roverApiService;
 
     @GetMapping("/")
-    public String getHomeView(Model model, @RequestParam(required = false) String marsRoverApi,
-                              @RequestParam(required = false) Integer marsSol,
-                              @RequestParam(required = false) Boolean defaultCheck1) {
-        if (marsRoverApi == null || marsRoverApi.isEmpty()) {
-            marsRoverApi = "opportunity"; // defines the opportunity for when the page is reloaded for the first time;
+    public String getHomeView(Model model, HomeDto homeDto) {    //@RequestParam(required = false) String marsRoverApi, @RequestParam(required = false) Integer marsSol, @RequestParam(required = false
+        if (homeDto.getMarsRoverApi() == null || homeDto.getMarsRoverApi().isEmpty())
+            homeDto.setMarsRoverApi("opportunity");  // defines the opportunity for when the page is reloaded for the first time;
+        if (homeDto.getMarsSol() == null) {
+            homeDto.setMarsSol(1);
         }
-        if (marsSol == null) {
-            marsSol = 1;
-        }
-        MarsRoverApiResponse roverData = roverApiService.getRoverData(marsRoverApi, marsSol);
+        MarsRoverApiResponse roverData = roverApiService.getRoverData(homeDto.getMarsRoverApi(), homeDto.getMarsSol());
         model.addAttribute("roverData", roverData);
+        model.addAttribute("homeDto", homeDto);
         return "index";
     }
 
