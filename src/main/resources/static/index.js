@@ -47,5 +47,10 @@ const marsRoverType = getParameterByName("marsRoverApi");
 btnRover(marsRoverType);
 
 
+var cars = ["fiat", "Volvo", "BMW", "outra", "coisa", "e", "mais", "jj"];
+
+console.log(cars[3.5]);
+
+
 
 

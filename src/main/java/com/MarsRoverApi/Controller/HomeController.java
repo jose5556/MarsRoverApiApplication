@@ -14,7 +14,8 @@ private MarsRoverApiService roverApiService;
 
     @GetMapping("/")
     public String getHomeView(Model model, @RequestParam(required = false) String marsRoverApi,
-                              @RequestParam(required = false) Integer marsSol) {
+                              @RequestParam(required = false) Integer marsSol,
+                              @RequestParam(required = false) Boolean defaultCheck1) {
         if (marsRoverApi == null || marsRoverApi.isEmpty()) {
             marsRoverApi = "opportunity"; // defines the opportunity for when the page is reloaded for the first time;
         }
@@ -25,6 +26,5 @@ private MarsRoverApiService roverApiService;
         model.addAttribute("roverData", roverData);
         return "index";
     }
-
 
 }
