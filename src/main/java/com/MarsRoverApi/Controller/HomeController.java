@@ -16,7 +16,7 @@ private MarsRoverApiService roverApiService;
     @GetMapping("/")
     public String getHomeView(Model model, HomeDto homeDto) {    //@RequestParam(required = false) String marsRoverApi, @RequestParam(required = false) Integer marsSol, @RequestParam(required = false
         if (homeDto.getMarsRoverApi() == null || homeDto.getMarsRoverApi().isEmpty())
-            homeDto.setMarsRoverApi("opportunity");  // defines the opportunity for when the page is reloaded for the first time;
+            homeDto.setMarsRoverApi("Curiosity");  // defines the opportunity for when the page is reloaded for the first time;
         if (homeDto.getMarsSol() == null) {
             homeDto.setMarsSol(1);
         }

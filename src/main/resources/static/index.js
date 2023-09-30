@@ -24,10 +24,10 @@ function btnRover(roverType) {
 
 if (roverType == "" || roverType == null) {
 
-        document.getElementById("marsApiOpportunity").classList.remove("btn");
-        document.getElementById("marsApiOpportunity").classList.remove("btn-secondary");
-        document.getElementById("marsApiOpportunity").classList.remove("btn-lg");
-        document.getElementById("marsApiOpportunity").classList = "btn btn-primary btn-lg";
+        document.getElementById("marsApiCuriosity").classList.remove("btn");
+        document.getElementById("marsApiCuriosity").classList.remove("btn-secondary");
+        document.getElementById("marsApiCuriosity").classList.remove("btn-lg");
+        document.getElementById("marsApiCuriosity").classList = "btn btn-primary btn-lg";
 
 } else {
 
@@ -45,11 +45,6 @@ document.getElementById("marsSol").value = marsSol;
 
 const marsRoverType = getParameterByName("marsRoverApi");
 btnRover(marsRoverType);
-
-
-var cars = ["fiat", "Volvo", "BMW", "outra", "coisa", "e", "mais", "jj"];
-
-console.log(cars[3.5]);
 
 
 
