@@ -1,5 +1,6 @@
 package com.MarsRoverApi.DTO;
 
+
 import lombok.Getter;
 import lombok.Setter;
 
