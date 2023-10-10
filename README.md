@@ -15,3 +15,12 @@ Now, what preferences? do you ask. Well, the api came with 3 types of rovers: "C
 ![Captura de ecrã 2023-10-10 164827](https://github.com/jose5556/MarsRoverApiApplication/assets/130366439/3f81600d-33bf-4dec-8986-b13b51d9814f)
 
 However, each rover have some cameras available and others not, but don't worry, even if you want, you can´t chose a camera that is not available.
+
+![Captura de ecrã 2023-10-10 165228](https://github.com/jose5556/MarsRoverApiApplication/assets/130366439/4a00be2f-2a16-49d0-93b4-46dc1a772de6)
+
+To end, this is all you need to know to use my application and admire fhotos like this: 
+
+
+
+
+
