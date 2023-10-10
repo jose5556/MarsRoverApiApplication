@@ -11,3 +11,7 @@ The reason why it needs a database, is because it has a checkBoxe called "rememb
 ![Captura de ecrã 2023-10-10 164413](https://github.com/jose5556/MarsRoverApiApplication/assets/130366439/cf0cf881-450e-4268-9d76-ea8e37949dfa)
 
 Now, what preferences? do you ask. Well, the api came with 3 types of rovers: "Curiosity", "Opportunity" and "Spirit", and each type of rover have diferent photos.
+
+![Captura de ecrã 2023-10-10 164827](https://github.com/jose5556/MarsRoverApiApplication/assets/130366439/3f81600d-33bf-4dec-8986-b13b51d9814f)
+
+However, each rover have some cameras available and others not, but don't worry, even if you want, you can´t chose a camera that is not available.
