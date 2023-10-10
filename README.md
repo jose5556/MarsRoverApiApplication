@@ -20,6 +20,9 @@ However, each rover have some cameras available and others not, but don't worry,
 
 To end, this is all you need to know to use my application and admire fhotos like this: 
 
+![Captura de ecrã 2023-10-10 165848](https://github.com/jose5556/MarsRoverApiApplication/assets/130366439/dc0a34d2-d572-4549-8e23-5115fda2fcbc)
+![Captura de ecrã 2023-10-10 165804](https://github.com/jose5556/MarsRoverApiApplication/assets/130366439/c1fdf679-cdb0-4fb1-8eb6-2486a2faa730)
+
 
 
 
