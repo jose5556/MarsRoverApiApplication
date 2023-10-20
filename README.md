@@ -8,7 +8,6 @@ To access and utilize the application, you'll need to set up a MySQL database an
 
 ![Captura de ecrã 2023-10-10 164126](https://github.com/jose5556/MarsRoverApiApplication/assets/130366439/4e7105c1-6c22-4fd6-a5e7-8b43c535f25c)
 
-The reason why it needs a database, is because it has a checkBoxe called "remember preferences" that allow you literally remember your preferences.
 The reason for requiring a database is due to the presence of a checkbox "remember preferences," which permits the app to store and reuse your selected preferences.
 
 ![Captura de ecrã 2023-10-10 164413](https://github.com/jose5556/MarsRoverApiApplication/assets/130366439/cf0cf881-450e-4268-9d76-ea8e37949dfa)
